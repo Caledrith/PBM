@@ -1,0 +1,32 @@
+.component1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    padding-top: 30px;
+    margin: -10px;
+    margin-right: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: #03496D;
+    height: 80px;
+    color: white
+}
+
+.title {    
+    width: 400px;   
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.link {
+    margin: 0 10px;
+}
+.login {
+    width: 150px;
+}

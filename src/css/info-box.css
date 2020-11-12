@@ -1,0 +1,10 @@
+.infobox {
+    height: 380px;
+    width: 380px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: maroon;
+    font-size: 60px;
+}
