@@ -1,25 +1,19 @@
 <template>
     <div class="component1">
-        <div class="title">
-            <router-link to="/">
+        <div @click="set( 'home' )" class="title">
            Philippines Bacolod Mission
-            </router-link>
         </div>
         <div class="links">
-            <div class="link">
-                <router-link to="/history">
-                    History
-                </router-link>
+            <div @click="set( 'presidents' )" class="link">
+                Presidents
             </div>
-            <div class="link">
-                <router-link to="/vision">
-                    Vision
-                </router-link> 
+            <div @click="set( 'business' )" class="link">
+                Mission Businesses
             </div>
-            <div class="link">
+            <div @click="set( 'souls' )" class="link">
                 Souls  
             </div>
-            <div class="link">
+            <div @click="set( 'stories' )" class="link">
                 Stories 
             </div>
         </div>
@@ -33,6 +27,12 @@
 export default {
   name: 'NavBar',
   props: {
+    msg: String
+  },
+  methods: {
+    set: function (route) {
+        this.$emit('clicked', route);
+    }
   }
 }
 </script>

@@ -12,6 +12,7 @@ export default {
   name: 'InfoBoxContainer',
   components: {InfoBox},
   props: {
+    msg: String
   },
   methods: {
     set: function (number) {

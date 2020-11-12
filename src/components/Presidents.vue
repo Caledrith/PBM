@@ -1,16 +1,16 @@
 <template>
-    <div class="infobox">
+    <div class="prescomponent">
         {{ msg }}
     </div>
 </template>
 
 <script>
 export default {
-  name: 'InfoBox',
+  name: 'Presidents',
   props: {
     msg: String
   }
 }
 </script>
 
-<style src="../css/info-box.css"></style>
+<style src="../css/presidents.css"></style>

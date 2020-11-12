@@ -2,10 +2,10 @@
     <div class="component">
         <div class="tagline">
             Wherefore, by their fruits ye shall know them
-            <br/>Matthew 7:20
+            Matthew 7:20
         </div>
         <div class="container">
-            <InfoBoxContainer />
+            <InfoBoxContainer @clicked="change"/>
         </div>
         <div class="content">
             <Vision v-if="number == 1"/>
@@ -21,10 +21,9 @@ import InfoBoxContainer from './InfoBoxContainer';
 import Vision from './Vision';
 import Purpose from './Purpose';
 import Resources from './Resources';
-import { reactive } from 'vue';
 
 export default {
-  name: 'Home',
+  name: 'Window',
   components: {
       InfoBoxContainer,
       Vision,
@@ -32,17 +31,20 @@ export default {
       Resources
   },
   props: {
+    msg: String
   },
-  setup () {
-    const state = reactive({
-      number: 1
-    });
-    function change (number1) {
-          state.number = number1;
+  methods: {
+      change: function (number1) {
+          this.number = number1;
       }
-    return { state, change }
+  },
+  data: function () {
+      return {
+        number:  1
+      }
   }
+
 }
 </script>
 
-<style src="../css/home.css"></style>
+<style src="../css/window.css"></style>
